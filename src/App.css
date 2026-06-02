@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b
+  );
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 50px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar h2 {
+  color: white;
+}
+
+.navbar button {
+  background: #06b6d4;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 12px 20px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background: #0891b2;
+}
+
+/* HEADER */
+
+.header {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+
+.header h1 {
+  font-size: 55px;
+}
+
+.header p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #cbd5e1;
+}
+
+/* STATS */
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.stat-card {
+  width: 220px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(15px);
+
+  border-radius: 20px;
+
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+}
+
+.stat-card h3 {
+  color: #38bdf8;
+  font-size: 32px;
+}
+
+.stat-card p {
+  margin-top: 10px;
+}
+
+/* SEARCH & FILTER */
+
+.filter-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 40px;
+}
+
+.search-bar {
+  width: 380px;
+
+  padding: 16px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 15px;
+
+  color: white;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: #cbd5e1;
+}
+
+.department-filter {
+  width: 250px;
+  padding: 16px;
+
+  background: rgba(255,255,255,0.1);
+  color: white;
+
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 15px;
+
+  outline: none;
+  cursor: pointer;
+}
+
+/* Dropdown options */
+.department-filter option {
+  background: #1e293b;
+  color: white;
+}
+
+/* EMPLOYEE GRID */
+
+.employee-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 30px;
+
+  padding: 20px;
+}
+
+/* EMPLOYEE CARD */
+
+.employee-card {
+  width: 320px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(20px);
+
+  border-radius: 25px;
+
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: 0.4s;
+  border: 1px solid rgba(255,255,255,0.1);
+
+position: relative;
+overflow: hidden;
+}
+
+.employee-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: #06b6d4;
+}
+
+/* AVATAR */
+
+.avatar {
+  width: 100px;
+  height: 100px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #3b82f6
+  );
+
+  color: white;
+
+  font-size: 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.employee-card h2 {
+  margin-top: 20px;
+  color: white;
+}
+
+.employee-card h4 {
+  margin-top: 10px;
+  color: #38bdf8;
+}
+
+/* DEPARTMENT BADGE */
+
+.department-badge {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  background: #06b6d4;
+
+  color: white;
+
+  padding: 8px 18px;
+
+  border-radius: 30px;
+}
+
+/* EMAIL */
+
+.email-link {
+  color: #e2e8f0;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  color: #38bdf8;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 60px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  color: #cbd5e1;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(20px);
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 38px;
+  }
+
+  .search-bar,
+  .department-filter {
+    width: 90%;
+  }
+
+  .employee-card {
+    width: 90%;
+  }
+}
